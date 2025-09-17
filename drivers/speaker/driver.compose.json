@@ -1,0 +1,33 @@
+{
+  "name": {
+    "en": "speaker"
+  },
+  "class": "speaker",
+  "capabilities": [
+    "speaker_album",
+    "speaker_artist",
+    "audio_output",
+    "speaker_duration",
+    "speaker_next",
+    "speaker_playing",
+    "speaker_prev",
+    "volume_set",
+    "speaker_track",
+    "onoff",
+    "measure_content_volume",
+    "volume_down",
+    "volume_mute",
+    "volume_up"
+  ],
+  "platforms": [
+    "local"
+  ],
+  "connectivity": [
+    "lan"
+  ],
+  "images": {
+    "small": "{{driverAssetsPath}}/images/small.png",
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "xlarge": "{{driverAssetsPath}}/images/xlarge.png"
+  }
+}
