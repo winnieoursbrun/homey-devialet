@@ -29,30 +29,83 @@
   "drivers": [
     {
       "name": {
-        "en": "speaker"
+        "en": "Devialet Speaker"
       },
       "class": "speaker",
       "capabilities": [
-        "speaker_album",
-        "speaker_artist",
-        "audio_output",
-        "speaker_duration",
-        "speaker_next",
-        "speaker_playing",
-        "speaker_prev",
         "volume_set",
-        "speaker_track",
-        "onoff",
-        "measure_content_volume",
+        "volume_up",
         "volume_down",
         "volume_mute",
-        "volume_up"
+        "speaker_playing",
+        "speaker_next",
+        "speaker_prev",
+        "speaker_artist",
+        "speaker_album",
+        "speaker_track",
+        "onoff"
       ],
+      "capabilitiesOptions": {
+        "onoff": {
+          "title": {
+            "en": "Power"
+          }
+        },
+        "volume_set": {
+          "title": {
+            "en": "Volume"
+          }
+        },
+        "volume_mute": {
+          "title": {
+            "en": "Mute"
+          }
+        },
+        "speaker_playing": {
+          "title": {
+            "en": "Playing"
+          }
+        }
+      },
       "platforms": [
         "local"
       ],
       "connectivity": [
         "lan"
+      ],
+      "discovery": "devialet-speaker",
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Device Settings"
+          },
+          "children": [
+            {
+              "id": "ip_address",
+              "type": "text",
+              "label": {
+                "en": "IP Address"
+              },
+              "hint": {
+                "en": "The IP address of the Devialet speaker"
+              }
+            }
+          ]
+        }
       ],
       "images": {
         "small": "/drivers/speaker/assets/images/small.png",
@@ -63,13 +116,31 @@
     }
   ],
   "discovery": {
-    "mDNS": {
+    "devialet-speaker": {
       "type": "mdns-sd",
       "mdns-sd": {
-        "name": "_http._tcp",
+        "name": "devialet-http",
         "protocol": "tcp"
       },
-      "id": "{{manufacturer=Devialet}}"
+      "id": "{{txt.serialNumber}}{{address}}",
+      "conditions": [
+        [
+          {
+            "field": "txt.manufacturer",
+            "match": {
+              "type": "string",
+              "value": "Devialet"
+            }
+          },
+          {
+            "field": "txt.ipControlVersion",
+            "match": {
+              "type": "string",
+              "value": "1"
+            }
+          }
+        ]
+      ]
     }
   }
 }
