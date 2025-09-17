@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "compatibility": ">=12.4.0",
   "sdk": 3,
+  "brandColor": "#999999",
   "platforms": [
     "local"
   ],
@@ -10,7 +11,8 @@
     "en": "Devialet"
   },
   "description": {
-    "en": "Adds support for Devialet devices"
+    "en": "Adds support for Devialet devices",
+    "fr": "Ajoute la prise en charge des appareils Devialet"
   },
   "category": [
     "music"
@@ -22,7 +24,6 @@
     "xlarge": "/assets/images/xlarge.png"
   },
   "author": {
-    "name": "Adrien Ruellou",
-    "email": "didi28000@gmail.com"
+    "name": "winnieoursbrun"
   }
 }

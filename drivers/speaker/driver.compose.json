@@ -1,6 +1,7 @@
 {
   "name": {
-    "en": "Devialet Speaker"
+    "en": "Devialet Speaker",
+    "fr": "Enceinte Devialet"
   },
   "class": "speaker",
   "capabilities": [
@@ -80,7 +81,6 @@
   ],
   "images": {
     "small": "{{driverAssetsPath}}/images/small.png",
-    "large": "{{driverAssetsPath}}/images/large.png",
-    "xlarge": "{{driverAssetsPath}}/images/xlarge.png"
+    "large": "{{driverAssetsPath}}/images/large.png"
   }
 }
