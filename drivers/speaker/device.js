@@ -2,7 +2,7 @@
 
 const Homey = require('homey');
 
-module.exports = class DevialetSpeakerDevice extends Homey.Device {
+module.exports = class DevialetPhantomDevice extends Homey.Device {
 
   /**
    * onInit is called when the device is initialized.
