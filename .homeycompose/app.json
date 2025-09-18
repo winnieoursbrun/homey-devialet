@@ -25,5 +25,9 @@
   },
   "author": {
     "name": "winnieoursbrun"
+  },
+  "source": "https://github.com/winnieoursbrun/homey-devialet",
+  "bugs": {
+    "url": "https://github.com/winnieoursbrun/homey-devialet/issues"
   }
 }
