@@ -10,5 +10,8 @@
   },
   "1.0.3": {
     "en": "Branding"
+  },
+  "1.1.0": {
+    "en": "Add support of Mania model, add nightmode and equalizer preset choice, add album art in player"
   }
 }
