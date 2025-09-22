@@ -1,0 +1,66 @@
+{
+  "name": {
+    "en": "Devialet Mania",
+    "fr": "Mania Devialet"
+  },
+  "class": "speaker",
+  "capabilities": [
+    "volume_set",
+    "volume_up",
+    "volume_down", 
+    "volume_mute",
+    "speaker_playing",
+    "speaker_next",
+    "speaker_prev",
+    "speaker_artist",
+    "speaker_album",
+    "speaker_track",
+    "onoff"
+  ],
+  "capabilitiesOptions": {
+    "onoff": {
+      "title": {
+        "en": "Power"
+      }
+    },
+    "volume_set": {
+      "title": {
+        "en": "Volume"
+      }
+    },
+    "volume_mute": {
+      "title": {
+        "en": "Mute"
+      }
+    },
+    "speaker_playing": {
+      "title": {
+        "en": "Playing"
+      }
+    }
+  },
+  "platforms": [
+    "local"
+  ],
+  "connectivity": [
+    "lan"
+  ],
+  "discovery": "devialet-mania",
+  "pair": [
+    {
+      "id": "list_devices",
+      "template": "list_devices",
+      "navigation": {
+        "next": "add_devices"
+      }
+    },
+    {
+      "id": "add_devices",
+      "template": "add_devices"
+    }
+  ],
+  "images": {
+    "small": "{{driverAssetsPath}}/images/small.png",
+    "large": "{{driverAssetsPath}}/images/large.png"
+  }
+}

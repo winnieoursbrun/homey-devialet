@@ -34,8 +34,8 @@
   "drivers": [
     {
       "name": {
-        "en": "Devialet Speaker",
-        "fr": "Enceinte Devialet"
+        "en": "Devialet Mania",
+        "fr": "Mania Devialet"
       },
       "class": "speaker",
       "capabilities": [
@@ -79,7 +79,7 @@
       "connectivity": [
         "lan"
       ],
-      "discovery": "devialet-speaker",
+      "discovery": "devialet-mania",
       "pair": [
         {
           "id": "list_devices",
@@ -93,6 +93,11 @@
           "template": "add_devices"
         }
       ],
+      "images": {
+        "small": "/drivers/mania/assets/images/small.png",
+        "large": "/drivers/mania/assets/images/large.png"
+      },
+      "id": "mania",
       "settings": [
         {
           "type": "group",
@@ -107,21 +112,233 @@
                 "en": "IP Address"
               },
               "hint": {
-                "en": "The IP address of the Devialet speaker"
+                "en": "The IP address of the Devialet Mania"
               }
             }
           ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Audio Settings"
+          },
+          "children": [
+            {
+              "id": "night_mode",
+              "type": "checkbox",
+              "value": false,
+              "label": {
+                "en": "Night Mode"
+              },
+              "hint": {
+                "en": "Enable night mode to reduce bass and dynamic range for late-night listening"
+              },
+              "highlight": true
+            },
+            {
+              "id": "equalizer_preset",
+              "type": "dropdown",
+              "value": "flat",
+              "label": {
+                "en": "Equalizer Preset"
+              },
+              "hint": {
+                "en": "Select the equalizer preset for audio enhancement"
+              },
+              "values": [
+                {
+                  "id": "flat",
+                  "label": {
+                    "en": "Flat"
+                  }
+                },
+                {
+                  "id": "voice",
+                  "label": {
+                    "en": "Voice"
+                  }
+                },
+                {
+                  "id": "custom",
+                  "label": {
+                    "en": "Custom"
+                  }
+                }
+              ],
+              "highlight": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "en": "Devialet Phantom",
+        "fr": "Phantom Devialet"
+      },
+      "class": "speaker",
+      "capabilities": [
+        "volume_set",
+        "volume_up",
+        "volume_down",
+        "volume_mute",
+        "speaker_playing",
+        "speaker_next",
+        "speaker_prev",
+        "speaker_artist",
+        "speaker_album",
+        "speaker_track",
+        "onoff"
+      ],
+      "capabilitiesOptions": {
+        "onoff": {
+          "title": {
+            "en": "Power"
+          }
+        },
+        "volume_set": {
+          "title": {
+            "en": "Volume"
+          }
+        },
+        "volume_mute": {
+          "title": {
+            "en": "Mute"
+          }
+        },
+        "speaker_playing": {
+          "title": {
+            "en": "Playing"
+          }
+        }
+      },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "lan"
+      ],
+      "discovery": "devialet-phantom",
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
         }
       ],
       "images": {
-        "small": "/drivers/speaker/assets/images/small.png",
-        "large": "/drivers/speaker/assets/images/large.png"
+        "small": "/drivers/phantom/assets/images/small.png",
+        "large": "/drivers/phantom/assets/images/large.png"
       },
-      "id": "speaker"
+      "id": "phantom",
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Device Settings"
+          },
+          "children": [
+            {
+              "id": "ip_address",
+              "type": "text",
+              "label": {
+                "en": "IP Address"
+              },
+              "hint": {
+                "en": "The IP address of the Devialet Phantom"
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Audio Settings"
+          },
+          "children": [
+            {
+              "id": "night_mode",
+              "type": "checkbox",
+              "value": false,
+              "label": {
+                "en": "Night Mode"
+              },
+              "hint": {
+                "en": "Enable night mode to reduce bass and dynamic range for late-night listening"
+              },
+              "highlight": true
+            },
+            {
+              "id": "equalizer_preset",
+              "type": "dropdown",
+              "value": "flat",
+              "label": {
+                "en": "Equalizer Preset"
+              },
+              "hint": {
+                "en": "Select the equalizer preset for audio enhancement"
+              },
+              "values": [
+                {
+                  "id": "flat",
+                  "label": {
+                    "en": "Flat"
+                  }
+                },
+                {
+                  "id": "voice",
+                  "label": {
+                    "en": "Voice"
+                  }
+                },
+                {
+                  "id": "custom",
+                  "label": {
+                    "en": "Custom"
+                  }
+                }
+              ],
+              "highlight": true
+            }
+          ]
+        }
+      ]
     }
   ],
   "discovery": {
-    "devialet-speaker": {
+    "devialet-mania": {
+      "type": "mdns-sd",
+      "mdns-sd": {
+        "name": "devialet-http",
+        "protocol": "tcp"
+      },
+      "id": "{{txt.serialNumber}}{{address}}",
+      "conditions": [
+        [
+          {
+            "field": "txt.manufacturer",
+            "match": {
+              "type": "string",
+              "value": "Devialet"
+            }
+          },
+          {
+            "field": "txt.ipControlVersion",
+            "match": {
+              "type": "string",
+              "value": "1"
+            }
+          }
+        ]
+      ]
+    },
+    "devialet-phantom": {
       "type": "mdns-sd",
       "mdns-sd": {
         "name": "devialet-http",

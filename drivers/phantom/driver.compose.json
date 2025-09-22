@@ -1,7 +1,7 @@
 {
   "name": {
-    "en": "Devialet Speaker",
-    "fr": "Enceinte Devialet"
+    "en": "Devialet Phantom",
+    "fr": "Phantom Devialet"
   },
   "class": "speaker",
   "capabilities": [
@@ -45,7 +45,7 @@
   "connectivity": [
     "lan"
   ],
-  "discovery": "devialet-speaker",
+  "discovery": "devialet-phantom",
   "pair": [
     {
       "id": "list_devices",
@@ -57,26 +57,6 @@
     {
       "id": "add_devices",
       "template": "add_devices"
-    }
-  ],
-  "settings": [
-    {
-      "type": "group",
-      "label": {
-        "en": "Device Settings"
-      },
-      "children": [
-        {
-          "id": "ip_address",
-          "type": "text",
-          "label": {
-            "en": "IP Address"
-          },
-          "hint": {
-            "en": "The IP address of the Devialet speaker"
-          }
-        }
-      ]
     }
   ],
   "images": {

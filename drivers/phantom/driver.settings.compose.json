@@ -1,0 +1,72 @@
+[
+  {
+    "type": "group",
+    "label": {
+      "en": "Device Settings"
+    },
+    "children": [
+      {
+        "id": "ip_address",
+        "type": "text",
+        "label": {
+          "en": "IP Address"
+        },
+        "hint": {
+          "en": "The IP address of the Devialet Phantom"
+        }
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Audio Settings"
+    },
+    "children": [
+      {
+        "id": "night_mode",
+        "type": "checkbox",
+        "value": false,
+        "label": {
+          "en": "Night Mode"
+        },
+        "hint": {
+          "en": "Enable night mode to reduce bass and dynamic range for late-night listening"
+        },
+        "highlight": true
+      },
+      {
+        "id": "equalizer_preset",
+        "type": "dropdown",
+        "value": "flat",
+        "label": {
+          "en": "Equalizer Preset"
+        },
+        "hint": {
+          "en": "Select the equalizer preset for audio enhancement"
+        },
+        "values": [
+          {
+            "id": "flat",
+            "label": {
+              "en": "Flat"
+            }
+          },
+          {
+            "id": "voice",
+            "label": {
+              "en": "Voice"
+            }
+          },
+          {
+            "id": "custom",
+            "label": {
+              "en": "Custom"
+            }
+          }
+        ],
+        "highlight": true
+      }
+    ]
+  }
+]
