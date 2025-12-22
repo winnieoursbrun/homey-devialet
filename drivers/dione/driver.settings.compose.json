@@ -1,0 +1,20 @@
+[
+  {
+    "type": "group",
+    "label": {
+      "en": "Device Settings"
+    },
+    "children": [
+      {
+        "id": "ip_address",
+        "type": "text",
+        "label": {
+          "en": "IP Address"
+        },
+        "hint": {
+          "en": "The IP address of the Devialet Dione soundbar"
+        }
+      }
+    ]
+  }
+]
