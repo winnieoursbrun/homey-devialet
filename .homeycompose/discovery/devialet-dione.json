@@ -1,0 +1,26 @@
+{
+  "type": "mdns-sd",
+  "mdns-sd": {
+    "name": "devialet-http",
+    "protocol": "tcp"
+  },
+  "id": "{{txt.serialNumber}}{{address}}",
+  "conditions": [
+    [
+      {
+        "field": "txt.manufacturer",
+        "match": {
+          "type": "string",
+          "value": "Devialet"
+        }
+      },
+      {
+        "field": "txt.ipControlVersion",
+        "match": {
+          "type": "string",
+          "value": "1"
+        }
+      }
+    ]
+  ]
+}
