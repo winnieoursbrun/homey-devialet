@@ -2,6 +2,11 @@
   "name": "com.devialet",
   "version": "1.0.0",
   "main": "app.js",
+  "dependencies": {
+    "node-fetch": "^2.7.0",
+    "node-ssdp": "^4.0.1",
+    "upnp-device-client": "^1.0.2"
+  },
   "scripts": {
     "lint": "eslint --ext .js,.ts --ignore-path .gitignore ."
   },
@@ -9,5 +14,22 @@
     "@types/homey": "npm:homey-apps-sdk-v3-types@^0.3.12",
     "eslint": "^7.32.0",
     "eslint-config-athom": "^3.1.5"
-  }
+  },
+  "description": "",
+  "directories": {
+    "doc": "docs",
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/winnieoursbrun/homey-devialet.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/winnieoursbrun/homey-devialet/issues"
+  },
+  "homepage": "https://github.com/winnieoursbrun/homey-devialet#readme"
 }
