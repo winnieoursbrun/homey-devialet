@@ -405,25 +405,7 @@
         "name": "devialet-http",
         "protocol": "tcp"
       },
-      "id": "{{txt.serialNumber}}{{address}}",
-      "conditions": [
-        [
-          {
-            "field": "txt.manufacturer",
-            "match": {
-              "type": "string",
-              "value": "Devialet"
-            }
-          },
-          {
-            "field": "txt.ipControlVersion",
-            "match": {
-              "type": "string",
-              "value": "1"
-            }
-          }
-        ]
-      ]
+      "id": "{{txt.serialnumber}}"
     },
     "devialet-mania": {
       "type": "mdns-sd",
@@ -431,25 +413,7 @@
         "name": "devialet-http",
         "protocol": "tcp"
       },
-      "id": "{{txt.serialNumber}}{{address}}",
-      "conditions": [
-        [
-          {
-            "field": "txt.manufacturer",
-            "match": {
-              "type": "string",
-              "value": "Devialet"
-            }
-          },
-          {
-            "field": "txt.ipControlVersion",
-            "match": {
-              "type": "string",
-              "value": "1"
-            }
-          }
-        ]
-      ]
+      "id": "{{txt.serialnumber}}"
     },
     "devialet-phantom": {
       "type": "mdns-sd",
@@ -457,25 +421,7 @@
         "name": "devialet-http",
         "protocol": "tcp"
       },
-      "id": "{{txt.serialNumber}}{{address}}",
-      "conditions": [
-        [
-          {
-            "field": "txt.manufacturer",
-            "match": {
-              "type": "string",
-              "value": "Devialet"
-            }
-          },
-          {
-            "field": "txt.ipControlVersion",
-            "match": {
-              "type": "string",
-              "value": "1"
-            }
-          }
-        ]
-      ]
+      "id": "{{txt.serialnumber}}"
     }
   }
 }
